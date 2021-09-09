@@ -4,8 +4,8 @@ import {Product} from '../product.model'
 
 @Component({
   selector:'app-product',
-  templateUrl:'../components/product.component.html',
-  styleUrls: ['../components/product.component.scss']
+  templateUrl:'../product/product.component.html',
+  styleUrls: ['../product/product.component.scss']
 })
 export class ProductComponent implements OnInit, DoCheck {
 
