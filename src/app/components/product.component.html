@@ -9,6 +9,7 @@
       <p>{{product.description | slice:0:10}}</p>
       <p>{{today | date:'short'}}</p>
     </div>
-    <a href="#" class="btn btn-primary fluid-container">Agregar al carro</a>
+    <a href="#" (click)="addCart()" class="btn btn-primary fluid-container">Agregar al carro</a>
+    <a [routerLink]="['/products', product.id]" class="btn btn-primary fluid-container">Ver producto</a>
   </div>
 </div>
