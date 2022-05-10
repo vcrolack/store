@@ -2,29 +2,32 @@ import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms'
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
+import  {AngularFireModule} from '@angular/fire/compat';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+
+
 import { AppComponent } from './app.component';
-import { ProductComponent } from './product/product.component';
-import { CartComponent } from './cart/cart.component';
-import { ProductsComponent } from './products/products.component';
-import { DemoComponent } from './demo/demo.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { CartComponent } from './shared/components/cart/cart.component';
 import { LayoutComponent } from './layout/layout.component';
+import { HttpClientModule } from '@angular/common/http';
 
 import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core/core.module';
-import { ContactModule } from './contact/contact.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { environment } from 'src/environments/environment';
+import { HolaComponent } from './hola/hola.component';
+
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductComponent,
     CartComponent,
-    ProductsComponent,
-    DemoComponent,
-    PageNotFoundComponent,
-    ProductDetailComponent,
     LayoutComponent,
+    HolaComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,11 @@ import { ContactModule } from './contact/contact.module';
     FormsModule,
     SharedModule,
     CoreModule,
-    ContactModule
+    BrowserAnimationsModule,
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    AngularFireStorageModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,30 @@
+/* :host {
+  margin: 2px;
+  border-radius: 5px;
+
+  display: block;
+}
+
+
+.container-catalogo {
+  display: flex;
+  justify-content: center;
+}
+.card-container {
+  height: 500px;
+  border: 1px black solid;
+  border-radius: 5px;
+} */
+.crop-image {
+display: block;
+height: 300px;
+width: 100%;
+  img {
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+    object-position: center;
+  }
+}
+
+
